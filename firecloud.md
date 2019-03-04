@@ -54,3 +54,12 @@ In your workspace:
     - "this.sample_id" and "this.pair_id" are always available even if you can't see them.
 
 ## Running your workflows
+1. Select "Launch Analysis" in the top right corner.
+2. Select your data to run on.
+    - If you are running on a set type:
+    in the Expression box, provide an expression. To run a pair method on pairs in a pair_set, for example,
+    use "this.pairs" . For the case samples in a case-control, use "this.pairs.control_sample" .
+
+## Important notes
+1. The runtime limit of FireCloud is five days
+2. Workflows which can run on preemptible instances are much, much cheaper.

@@ -3,10 +3,34 @@ Using the Broad FireCloud
 Eric T Dawson  
 Updated: March 2019
 
+## Setup
+You'll need Docker and a Java installation to run this tutorial. You can download Docker for you system.
+
+We'll also need to pull the FISS image to push our tool. To get it, run:
+```
+docker pull erictdawson/fiss
+```
+
+We want Cromwell and WOMtool for running and debugging our workflows locally. We can get
+them from the GitHub releases page.
+
+```
+wget https://github.com/broadinstitute/cromwell/releases/download/36.1/cromwell-36.1.jar
+## Aaaand WOMtool
+wget https://github.com/broadinstitute/cromwell/releases/download/36.1/womtool-36.1.jar
+```
+
+
 ## Dockerizing a tool
 See the docker.md tutorial for additional information on dockerizing a tool
 
-## Writing a WDL description
+
+## Debugging and running your tool locally
+
+### Testing your Docker container
+
+### Preparing to run your tool in Cromwell
+
 
 ## Notes about imports
 There are some important rules about imports:  
@@ -17,6 +41,9 @@ There are some important rules about imports:
 time there's a fresh snapshot.
 5. WDLs can only be registed on FireCloud if they are a workflow, but
 you can use an empty dummy workflow without issue.
+
+## Writing a WDL description
+
 
 ## Pushing to FireCloud
 The FireCloud CLI has been deprecated and no longer works, however FISS

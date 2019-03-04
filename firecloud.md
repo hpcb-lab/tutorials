@@ -49,6 +49,12 @@ you can use an empty dummy workflow without issue.
 The FireCloud CLI has been deprecated and no longer works, however FISS
 (FireCloud Selector Service) is functional if undocumented.
 
+We need to run FISS inside docker. The following command will run FISS and mount your home
+directory (at /work) so you can access your WDL files in the container:
+```
+docker run --rm -it -v "$HOME"/.config:/.config -v "$HOME":/work erictdawson/fiss bash
+````
+
 To push a tool to FireCloud using FISS, the command is:
 ```
 fissfc meth_new
